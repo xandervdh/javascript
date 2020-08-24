@@ -10,10 +10,27 @@
 // You will have time to focus on it later.
 
 (function() {
-    // to get the value of an input: document.getElementById("element-id").value
-
+   var one = document.getElementById("op-one").value;
+   var two = document.getElementById("op-two").value;
     var performOperation = function(operation) {
-        // perform the operation
+        var symbol = document.getElementById(operation).id;
+        switch (operation){
+            case "addition":
+                var addition = parseInt(one) + parseInt(two);
+                alert(addition);
+                break;
+            case "substraction":
+                var substraction = parseInt(one) - parseInt(two);
+                alert(substraction);
+                break;
+            case "multiplication":
+                var multiplication = parseInt(one) * parseInt(two);
+                alert(multiplication);
+                break;
+            case "division":
+                var division = parseInt(one) / parseInt(two);
+                alert(division);
+        }
     };
 
     Array.from(document.querySelectorAll("button.operator")).forEach(function($btn) {
