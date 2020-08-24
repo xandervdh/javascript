@@ -9,8 +9,11 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
-    // your code here
-
+(function () {
+    var btns = document.getElementsByTagName("button");
+    for (i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+            document.body.style.backgroundColor = this.id;
+        });
+    }
 })();
