@@ -19,14 +19,17 @@
     });
 
     document.getElementById("substraction").addEventListener("click", function() {
-        // perform an substraction
+        var substraction = parseInt(one) - parseInt(two);
+        alert(substraction);
     });
 
     document.getElementById("multiplication").addEventListener("click", function() {
-        // perform an multiplication
+        var multiplication = parseInt(one) * parseInt(two);
+        alert(multiplication);
     });
 
     document.getElementById("division").addEventListener("click", function() {
-        // perform an division
+        var division = parseInt(one) / parseInt(two);
+        alert(division);
     });
 })();
