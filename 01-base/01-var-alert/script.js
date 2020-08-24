@@ -11,6 +11,7 @@
 
 (function() {
 
-    // your code here
+    var xanderIsGreat = "Hello world!";
+    alert(xanderIsGreat);
 
 })();
