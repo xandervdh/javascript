@@ -11,6 +11,20 @@
 
 (function() {
 
-    // your code here
+    document.querySelector("button").onclick = function (event) {
+        var d = new Date();
+        var dobd = document.getElementById("dob-day").value;
+        var dobm = document.getElementById("dob-month").value;
+        var doby = document.getElementById("dob-year").value;
+        var dob = dobd + "/" + dobm + "/" + doby;
+        var bday = new Date(dob);
+        var age = d.getFullYear() - bday.getFullYear();
+        var m = d.getMonth() - bday.getMonth();
+
+        if (m < 0 || (m === 0 && d.getDate() < bday.getDate())) {
+            age = age - 1;
+        }
+        alert(age);
+    }
 
 })();
