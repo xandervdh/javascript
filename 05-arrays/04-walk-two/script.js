@@ -26,6 +26,10 @@
         "cerise",
     ];
 
-    // your code here
+    document.querySelector("button").onclick = function (event) {
+        fruits.forEach(function (fruits) {
+            console.log(fruits)
+        });
+    }
 
 })();
