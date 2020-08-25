@@ -28,6 +28,9 @@
         "cerise",
     ];
 
-    // your code here
+    document.querySelector("button").onclick = function (event) {
+        var noDubbles = [...new Set(fruits)];
+        console.log(noDubbles);
+    }
 
 })();
