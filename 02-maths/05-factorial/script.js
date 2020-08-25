@@ -10,15 +10,19 @@
 // You will have time to focus on it later.
 
 (function() {
-    
-    // to get the value of an input: document.getElementById("element-id").value
-    var number = document.getElementById("number").value;
+    let number;
+
     document.getElementById("run").addEventListener("click", function() {
 
+        checkInput();
+        let result = 1;
         for (var i = number - 1; i >= 1; i--) {
-            number *= i;
+            result += result * i;
         }
-        alert(number);
+        alert(result);
     });
+    function checkInput(){
+        number = document.getElementById("number").value;
+    }
 
 })();
