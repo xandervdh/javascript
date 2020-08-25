@@ -16,12 +16,10 @@
         var dobd = document.getElementById("dob-day").value;
         var dobm = document.getElementById("dob-month").value;
         var doby = document.getElementById("dob-year").value;
-        var dob = dobd + "/" + dobm + "/" + doby;
-        var bday = new Date(dob);
-        var age = d.getFullYear() - bday.getFullYear();
-        var m = d.getMonth() - bday.getMonth();
+        var age = d.getFullYear() - doby;
+        var m = d.getMonth() - (dobm - 1);
 
-        if (m < 0 || (m === 0 && d.getDate() < bday.getDate())) {
+        if (m < 0 || (m === 0 && d.getDate() < dobd)) {
             age = age - 1;
         }
         alert(age);
