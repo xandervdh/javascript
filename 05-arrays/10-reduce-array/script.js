@@ -89,6 +89,13 @@
         },
     ];
 
-    // your code here
+    document.querySelector("button").onclick = function (event) {
+        var ages = [];
+        people.forEach(function (age){
+            ages.push(age.age);
+        });
+        var sum = ages.reduce((a, b) => a + b, 0);
+        console.log(sum);
+    }
 
 })();
