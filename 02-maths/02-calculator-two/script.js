@@ -10,24 +10,29 @@
 // You will have time to focus on it later.
 
 (function() {
-   var one = document.getElementById("op-one").value;
-   var two = document.getElementById("op-two").value;
+    let one;
+    let two;
+
     var performOperation = function(operation) {
         var symbol = document.getElementById(operation).id;
         switch (operation){
             case "addition":
+                checkInput();
                 var addition = parseInt(one) + parseInt(two);
                 alert(addition);
                 break;
             case "substraction":
+                checkInput();
                 var substraction = parseInt(one) - parseInt(two);
                 alert(substraction);
                 break;
             case "multiplication":
+                checkInput();
                 var multiplication = parseInt(one) * parseInt(two);
                 alert(multiplication);
                 break;
             case "division":
+                checkInput();
                 var division = parseInt(one) / parseInt(two);
                 alert(division);
         }
@@ -38,4 +43,8 @@
             performOperation($btn.id);
         });
     });
+    function checkInput(){
+        one = document.getElementById("op-one").value;
+        two = document.getElementById("op-two").value;
+    }
 })();
