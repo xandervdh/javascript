@@ -39,6 +39,10 @@
         },
     ];
 
-    // your code here
+    document.querySelector("button").onclick = function (event) {
+        people.forEach(function (person) {
+            console.log(person.firstname + " " + person.lastname);
+        });
+    }
 
 })();
