@@ -88,7 +88,16 @@
             age: 81,
         },
     ];
-
-    // your code here
+    var newPeople = [] ;
+    document.querySelector("button").onclick = function (event) {
+        people.forEach(function (person) {
+            if (person.age > 18){
+                newPeople.push(person);
+            }
+        });
+        newPeople.forEach(function (peeps){
+            console.log(peeps);
+        });
+    }
 
 })();
