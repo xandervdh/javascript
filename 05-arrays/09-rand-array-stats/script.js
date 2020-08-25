@@ -11,6 +11,26 @@
 
 (function() {
 
-    // your code here
+    document.querySelector("button").onclick = function (event) {
+        var numbers = [];
+        for (x = 0; x < 10; x++){
+            numbers.push(Math.floor(Math.random() * Math.floor(100)));
+        }
+
+        for (i = 1; i <=10; i++) {
+            document.getElementById("n-"+i).innerHTML = numbers[i-1];
+        }
+
+        var min = Math.min(...numbers);
+        var max = Math.max(...numbers);
+        var sum = numbers.reduce((a, b) => a + b, 0);
+        var avg = sum/10;
+        document.getElementById("min").innerHTML = min;
+        document.getElementById("max").innerHTML = max;
+        document.getElementById("sum").innerHTML = sum;
+        document.getElementById("average").innerHTML = avg;
+
+
+    }
 
 })();
