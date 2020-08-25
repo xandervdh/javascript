@@ -13,6 +13,10 @@
 
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
-    // your code here
+    var d = new Date;
+    var month =  d.toLocaleString("default", {month: "long"});
+    var day = d.toLocaleDateString("default", { weekday: "long"});
+    var currDate = day + " " + d.getDate() + " " + month + " " + d.getFullYear() + ", " + d.getHours() + "h" + d.getMinutes();
+    document.getElementById("target").innerHTML = currDate;
 
 })();
