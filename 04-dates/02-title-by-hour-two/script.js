@@ -16,11 +16,12 @@
     let d = new Date();
     let time = d.getHours();
     let min = d.getMinutes();
+    let total = time + min;
 
-    if (time < 18 && min < 30) {
-        document.getElementById("target").innerHTML = "Good evening";
-    } else {
+    if (total < 1730) {
         document.getElementById("target").innerHTML = "Hello";
+    } else {
+        document.getElementById("target").innerHTML = "Good evening";
     }
 
 })();
