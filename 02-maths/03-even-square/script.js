@@ -12,12 +12,10 @@
 (function() {
 
     document.getElementById("run").addEventListener("click", function() {
-
-        var msg="";
-        var res= "0";
-        for (var x = 1; x<=21; x++) {
-            var square = x * x;
-            var msg = msg + square + "\n";
+        var msg = "";
+        for (let x = 1; x<=21; x++) {
+            let square = x * x;
+            msg += square + "\n";
         }
         alert(msg);
 

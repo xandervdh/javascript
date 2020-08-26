@@ -11,7 +11,7 @@
 
 (function() {
 
-    var xanderIsGreat = "Hello world!";
+    let xanderIsGreat = "Hello world!";
     alert(xanderIsGreat);
 
 })();

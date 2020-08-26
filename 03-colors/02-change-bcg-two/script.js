@@ -12,7 +12,7 @@
 (function() {
 
     document.querySelector("button").onclick = function (event) {
-        var color = document.getElementById("color").value;
+        let color = document.getElementById("color").value;
         document.body.style.backgroundColor = color;
     }
 

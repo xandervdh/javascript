@@ -15,25 +15,25 @@
 
     document.getElementById("addition").addEventListener("click", function() {
         checkInput();
-        var addition = parseInt(one) + parseInt(two);
+        let addition = parseInt(one) + parseInt(two);
         alert(addition);
     });
 
     document.getElementById("substraction").addEventListener("click", function() {
         checkInput();
-        var substraction = parseInt(one) - parseInt(two);
+        let substraction = parseInt(one) - parseInt(two);
         alert(substraction);
     });
 
     document.getElementById("multiplication").addEventListener("click", function() {
         checkInput();
-        var multiplication = parseInt(one) * parseInt(two);
+        let multiplication = parseInt(one) * parseInt(two);
         alert(multiplication);
     });
 
     document.getElementById("division").addEventListener("click", function() {
         checkInput();
-        var division = parseInt(one) / parseInt(two);
+        let division = parseInt(one) / parseInt(two);
         alert(division);
     });
 

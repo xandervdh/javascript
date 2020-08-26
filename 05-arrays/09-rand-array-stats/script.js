@@ -12,7 +12,7 @@
 (function() {
 
     document.querySelector("button").onclick = function (event) {
-        var numbers = [];
+        let numbers = [];
         for (x = 0; x < 10; x++){
             numbers.push(Math.floor(Math.random() * Math.floor(100)));
         }
@@ -21,10 +21,10 @@
             document.getElementById("n-"+i).innerHTML = numbers[i-1];
         }
 
-        var min = Math.min(...numbers);
-        var max = Math.max(...numbers);
-        var sum = numbers.reduce((a, b) => a + b, 0);
-        var avg = sum/10;
+        let min = Math.min(...numbers);
+        let max = Math.max(...numbers);
+        let sum = numbers.reduce((a, b) => a + b, 0);
+        let avg = sum/10;
         document.getElementById("min").innerHTML = min;
         document.getElementById("max").innerHTML = max;
         document.getElementById("sum").innerHTML = sum;

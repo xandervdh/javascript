@@ -11,7 +11,7 @@
 
 (function() {
 
-    var answer = window.prompt("Do you want some cake?");
+    let answer = window.prompt("Do you want some cake?");
 
     if (answer === "yes") {
         alert("Congratulations, enjoy your cake.");

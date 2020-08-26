@@ -10,19 +10,24 @@
 // You will have time to focus on it later.
 
 (function() {
-    var y = document.getElementById("year").value;
+    let y;
 
 
     document.querySelector("button").onclick = function (event) {
-        var answer = "";
+        checkInput();
+        let answer = "";
         for (x = 0; x <= 11; x++){
-            var d = new Date(y, x, 13);
+            let d = new Date(y, x, 13);
             var weekday = d.getDay();
             if (weekday === 5){
                 answer += (d.toLocaleString("default", {month: "long"}) + "\n");
             }
         }
         alert(answer);
+    }
+
+    function checkInput(){
+         y = document.getElementById("year").value;
     }
 
 })();

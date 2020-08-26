@@ -29,7 +29,7 @@
     ];
 
     document.querySelector("button").onclick = function (event) {
-        var noDubbles = [...new Set(fruits)];
+        let noDubbles = [...new Set(fruits)];
         console.log(noDubbles);
     }
 

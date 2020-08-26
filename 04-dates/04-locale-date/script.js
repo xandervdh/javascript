@@ -13,10 +13,10 @@
 
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
-    var d = new Date;
-    var month =  d.toLocaleString("default", {month: "long"});
-    var day = d.toLocaleDateString("default", { weekday: "long"});
-    var currDate = day + " " + d.getDate() + " " + month + " " + d.getFullYear() + ", " + d.getHours() + "h" + d.getMinutes();
+    let d = new Date;
+    let month =  d.toLocaleString("default", {month: "long"});
+    let day = d.toLocaleDateString("default", { weekday: "long"});
+    let currDate = day + " " + d.getDate() + " " + month + " " + d.getFullYear() + ", " + d.getHours() + "h" + d.getMinutes();
     document.getElementById("target").innerHTML = currDate;
 
 })();

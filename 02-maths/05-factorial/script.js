@@ -16,7 +16,7 @@
 
         checkInput();
         let result = 1;
-        for (var i = number - 1; i >= 1; i--) {
+        for (let i = number - 1; i >= 1; i--) {
             result += result * i;
         }
         alert(result);

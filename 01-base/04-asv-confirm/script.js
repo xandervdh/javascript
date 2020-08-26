@@ -9,18 +9,16 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function quesitions() {
 
-    var age = window.prompt("How old are you?");
-    var gender = window.prompt("Are you male or female or offended?");
-    var town = window.prompt("Where do you live?");
+    let age = window.prompt("How old are you?");
+    let gender = window.prompt("Are you male or female or offended?");
+    let town = window.prompt("Where do you live?");
 
     if (confirm(age + " " + gender + " " + town)) {
 
     }else {
-        var age = window.prompt("How old are you?");
-        var gender = window.prompt("Are you male or female or offended?");
-        var town = window.prompt("Where do you live?");
+        quesitions();
     }
 
 })();

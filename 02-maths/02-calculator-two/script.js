@@ -13,27 +13,27 @@
     let one;
     let two;
 
-    var performOperation = function(operation) {
-        var symbol = document.getElementById(operation).id;
+    let performOperation = function(operation) {
+        let symbol = document.getElementById(operation).id;
         switch (operation){
             case "addition":
                 checkInput();
-                var addition = parseInt(one) + parseInt(two);
+                let addition = parseInt(one) + parseInt(two);
                 alert(addition);
                 break;
             case "substraction":
                 checkInput();
-                var substraction = parseInt(one) - parseInt(two);
+                let substraction = parseInt(one) - parseInt(two);
                 alert(substraction);
                 break;
             case "multiplication":
                 checkInput();
-                var multiplication = parseInt(one) * parseInt(two);
+                let multiplication = parseInt(one) * parseInt(two);
                 alert(multiplication);
                 break;
             case "division":
                 checkInput();
-                var division = parseInt(one) / parseInt(two);
+                let division = parseInt(one) / parseInt(two);
                 alert(division);
         }
     };

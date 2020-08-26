@@ -12,12 +12,12 @@
 (function() {
 
     document.querySelector("button").onclick = function (event) {
-        var d = new Date();
-        var dobd = document.getElementById("dob-day").value;
-        var dobm = document.getElementById("dob-month").value;
-        var doby = document.getElementById("dob-year").value;
-        var age = d.getFullYear() - doby;
-        var m = d.getMonth() - (dobm - 1);
+        let d = new Date();
+        let dobd = document.getElementById("dob-day").value;
+        let dobm = document.getElementById("dob-month").value;
+        let doby = document.getElementById("dob-year").value;
+        let age = d.getFullYear() - doby;
+        let m = d.getMonth() - (dobm - 1);
 
         if (m < 0 || (m === 0 && d.getDate() < dobd)) {
             age = age - 1;
