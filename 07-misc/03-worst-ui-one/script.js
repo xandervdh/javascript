@@ -11,6 +11,11 @@
 
 (function() {
 
-    // your code here
+    let slider = document.getElementById("slider");
+    let amount = document.getElementById("target");
+
+    slider.oninput = function () {
+        amount.innerHTML = "0" + this.value;
+    }
 
 })();
