@@ -11,6 +11,19 @@
 
 (function() {
 
-    // your code here
+    let buttons = document.getElementsByTagName("button");
+    let input = document.getElementsByTagName("input");
+    let target = document.getElementById("target");
+
+    for (let i = 0; i < buttons.length; i++){
+
+        let min = parseInt(input[i].dataset.min);
+        let max = parseInt(input[i].dataset.max);
+
+        buttons[i].addEventListener("click", function (){
+            let output = Math.floor(Math.random() * (max - min + 1) + min);
+            input[i].setAttribute("value", output);
+        });
+    }
 
 })();

@@ -18,7 +18,6 @@
     let number = document.getElementById("target");
 
     let buttons = document.getElementsByTagName("button");
-    numberCheck();
     /*let outputOne;
     let outputTwo;
     let outputThree;
