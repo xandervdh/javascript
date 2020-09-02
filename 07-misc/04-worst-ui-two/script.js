@@ -102,6 +102,7 @@
         button = [];
         for (let x = 0; x < buttons.length; x++){
             button[x] = buttons[x].innerText;
+            console.log(button);
         }
 
     }
