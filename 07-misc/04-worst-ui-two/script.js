@@ -17,12 +17,6 @@
     let buttonFour = document.getElementById("part-four");
     let number = document.getElementById("target");
 
-    /*function add() {
-        let output = parseInt(this.innerText);
-        output++;
-        console.log(output);
-        number.innerHTML = output;
-    }*/
     let outputOne;
     let outputTwo;
     let outputThree;
