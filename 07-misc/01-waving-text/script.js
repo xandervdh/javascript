@@ -11,7 +11,7 @@
 
 (function() {
 
-    let words = "Woo-hoo! I'm making waves! Wéééé! Oh ... I think I'm having seasickness ...";
+    let words = document.getElementById("target").innerText;
     let characters = words.split('');
     let wave = "";
     let size = [1, 2, 3, 4, 5, 4, 3, 2]
