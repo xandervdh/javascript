@@ -11,17 +11,42 @@
 
 (function () {
 
-    let buttonOne = document.getElementById("part-one");
+    /*let buttonOne = document.getElementById("part-one");
     let buttonTwo = document.getElementById("part-two");
     let buttonThree = document.getElementById("part-three");
-    let buttonFour = document.getElementById("part-four");
+    let buttonFour = document.getElementById("part-four");*/
     let number = document.getElementById("target");
 
-    let outputOne;
+    let buttons = document.getElementsByTagName("button");
+    numberCheck();
+    /*let outputOne;
     let outputTwo;
     let outputThree;
-    let outputFour;
-    buttonOne.addEventListener("click", function () {
+    let outputFour;*/
+
+    for (let i = 0; i < buttons.length; i++){
+        buttons[i].addEventListener("click", function (){
+            numberCheck();
+
+            if (buttons[i].innerText < buttons[i].dataset.max){
+                button[i]++;
+                if (button[i] < 10){
+                    button[i] = "0" + button[i];
+                }
+            } else {
+                button[i] = buttons[i].dataset.min;
+            }
+            buttons[i].innerHTML = button[i];
+            let output = "";
+            for (let y = 0; y < button.length; y++){
+                output += button[y];
+            }
+            //output = button[i];
+            number.innerHTML = "0" + output;
+        });
+    }
+
+    /*buttonOne.addEventListener("click", function () {
         numberCheck();
         if (outputOne < buttonOne.dataset.max) {
             outputOne++;
@@ -72,13 +97,14 @@
         }
         buttonFour.innerHTML = outputFour;
         number.innerHTML = "0" + outputOne + outputTwo + outputThree + outputFour;
-    });
+    });*/
 
     function numberCheck() {
-        outputOne = buttonOne.innerText;
-        outputTwo = buttonTwo.innerText;
-        outputThree = buttonThree.innerText;
-        outputFour = buttonFour.innerText;
+        button = [];
+        for (let x = 0; x < buttons.length; x++){
+            button[x] = buttons[x].innerText;
+        }
+
     }
 
 })();
