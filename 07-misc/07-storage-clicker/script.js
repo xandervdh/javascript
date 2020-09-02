@@ -11,6 +11,18 @@
 
 (function() {
 
-    // your code here
+   let button = document.getElementById("increment");
+   let target = document.getElementById("target");
+   let number = localStorage.getItem("number");
+   if (number == null){
+       number = "0";
+   }
+   target.innerHTML = number;
+
+   button.addEventListener("click", function (){
+       number++;
+       localStorage.setItem("number", number);
+       target.innerHTML = number;
+   });
 
 })();
