@@ -40,7 +40,6 @@
             for (let y = 0; y < button.length; y++){
                 output += button[y];
             }
-            //output = button[i];
             number.innerHTML = output;
         });
     }
@@ -56,7 +55,7 @@
         number.innerHTML = "0" + outputOne + outputTwo + outputThree + outputFour;
     });
 
-    buttonTwo.addEventListener("click", function () {
+    buttonTwo.addEventListener("click", func            console.log(button);tion () {
         numberCheck();
         if (outputTwo < buttonTwo.dataset.max) {
             outputTwo++;
