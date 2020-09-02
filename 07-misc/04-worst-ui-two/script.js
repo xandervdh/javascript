@@ -36,12 +36,12 @@
                 button[i] = buttons[i].dataset.min;
             }
             buttons[i].innerHTML = button[i];
-            let output = "";
+            let output = "0";
             for (let y = 0; y < button.length; y++){
                 output += button[y];
             }
             //output = button[i];
-            number.innerHTML = "0" + output;
+            number.innerHTML = output;
         });
     }
 
@@ -102,7 +102,6 @@
         button = [];
         for (let x = 0; x < buttons.length; x++){
             button[x] = buttons[x].innerText;
-            console.log(button);
         }
 
     }
