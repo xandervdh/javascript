@@ -23,10 +23,10 @@
     let outputFour;
     buttonOne.addEventListener("click", function () {
         numberCheck();
-        if (outputOne < 499) {
+        if (outputOne < buttonOne.dataset.max) {
             outputOne++;
         } else {
-            outputOne = "460";
+            outputOne = buttonOne.dataset.min;
         }
         buttonOne.innerHTML = outputOne;
         number.innerHTML = "0" + outputOne + outputTwo + outputThree + outputFour;
@@ -34,7 +34,7 @@
 
     buttonTwo.addEventListener("click", function () {
         numberCheck();
-        if (outputTwo < 99) {
+        if (outputTwo < buttonTwo.dataset.max) {
             outputTwo++;
             if (outputTwo < 10) {
                 outputTwo = "0" + outputTwo;
