@@ -10,16 +10,16 @@
 // You will have time to focus on it later.
 
 (() => {
-    let promise = new Promise(function (){
-        return window.lib.getPosts();
-    })
-
 
     const btn = document.getElementById("run");
-    btn.addEventListener("click", () => {
-
-        console.log(promise);
-
+    btn.addEventListener("click", function (){
+        window.lib.getPosts((rejected, notrejected) => {
+            if (rejected){
+                console.log(rejected);
+            } else {
+                console.log(notrejected);
+            }
+        });
     })
 
 })();
