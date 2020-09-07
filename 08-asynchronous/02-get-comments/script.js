@@ -11,8 +11,23 @@
 
 (() => {
 
-    const btn = document.getElementById("run");
-    let varr;
+    let run = document.getElementById("run");
+
+    run.addEventListener("click", getPostsWithComments)
+
+    function getPostsWithComments() {
+        window.lib.getPosts(function (error, posts){
+            posts.forEach(post => {
+                window.lib.getComments(post.id, function (error, comments){
+                    post.comment = comments;
+                })
+                console.log(post);
+            })
+        });
+    }
+
+    /*const btn = document.getElementById("run");
+    let varr = "";
     btn.addEventListener("click", function (){
         window.lib.getPosts((rejected, notrejected) => {
             if (rejected){
@@ -20,22 +35,21 @@
             } else {
                 console.log(notrejected);
                 varr = notrejected;
-                window.lib.getComments(varr, (rejected, notrejected) => {
-                    if (rejected){
-                        console.log(rejected);
+            }
+        });
+        let comments = () => {
+            for (let i = 0; i < varr.length; i++) {
+                window.lib.getComments(i, (rejected, notrejected) => {
+                    if (rejected) {
+                        return rejected;
                     } else {
-                        console.log(notrejected);
+                        return notrejected;
                     }
                 });
             }
-        });
-        /*window.lib.getComments(varr, (rejected, notrejected) => {
-            if (rejected){
-                console.log(rejected);
-            } else {
-                console.log(notrejected);
-            }
-        });*/
-    })
+        }
+        let promise = new Promise(comments)
+        console.log(promise);
+    })*/
 
 })();
