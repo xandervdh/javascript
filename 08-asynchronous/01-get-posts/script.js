@@ -10,5 +10,16 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let promise = new Promise(function (){
+        return window.lib.getPosts();
+    })
+
+
+    const btn = document.getElementById("run");
+    btn.addEventListener("click", () => {
+
+        console.log(promise);
+
+    })
+
 })();
