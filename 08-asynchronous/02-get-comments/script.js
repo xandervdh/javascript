@@ -10,5 +10,32 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+    const btn = document.getElementById("run");
+    let varr;
+    btn.addEventListener("click", function (){
+        window.lib.getPosts((rejected, notrejected) => {
+            if (rejected){
+                console.log(rejected);
+            } else {
+                console.log(notrejected);
+                varr = notrejected;
+                window.lib.getComments(varr, (rejected, notrejected) => {
+                    if (rejected){
+                        console.log(rejected);
+                    } else {
+                        console.log(notrejected);
+                    }
+                });
+            }
+        });
+        /*window.lib.getComments(varr, (rejected, notrejected) => {
+            if (rejected){
+                console.log(rejected);
+            } else {
+                console.log(notrejected);
+            }
+        });*/
+    })
+
 })();
