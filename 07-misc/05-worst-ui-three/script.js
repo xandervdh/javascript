@@ -52,8 +52,8 @@
             value[y] = input[y].value;
 
             let number = "0";
-            for (let y = 0; y < value.length; y++) {
-                number += value[y];
+            for (let x = 0; x < value.length; x++) {
+                number += value[x];
             }
 
             target.innerHTML = number;
