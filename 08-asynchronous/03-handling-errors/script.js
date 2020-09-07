@@ -10,5 +10,16 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+    const btn = document.getElementById("run");
+    btn.addEventListener("click", function (){
+        window.lib.getPersons((rejected, notrejected) => {
+            if (rejected){
+                console.error(rejected);
+            } else {
+                console.log(notrejected);
+            }
+        });
+    })
+
 })();
