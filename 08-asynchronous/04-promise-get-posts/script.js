@@ -16,10 +16,6 @@
         function successCallback(result) {
             console.log(result);
         }
-
-        function failureCallback(error) {
-            console.error(error);
-        }
-        window.lib.getPosts().then(successCallback, failureCallback);
+        window.lib.getPosts().then(successCallback);
     })
 })();
