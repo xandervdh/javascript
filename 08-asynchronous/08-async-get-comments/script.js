@@ -17,14 +17,14 @@
 
         async function succesTwoCallback(comments) {
             //console.log(comments);
-            array.comment = comments;
-            console.log(array);
+            await array.comment = comments;
+            await console.log(array);
 
         }
 
         async function successCallback(posts) {
             //console.log(posts);
-            posts.forEach(post => {
+            await posts.forEach(post => {
                 array = post;
                 window.lib.getComments(post.id).then(succesTwoCallback);
             })
