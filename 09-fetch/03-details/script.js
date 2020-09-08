@@ -10,5 +10,24 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let run = document.getElementById("run");
+    let input;
+    run.addEventListener("click", function (){
+        checkInput();
+        fetch("http://localhost:3000/heroes")
+            .then(response => response.json())
+            .then(data => appendData(data))
+        function appendData(data){
+            console.log(data);
+            let target = document.getElementById("target");
+            target.innerHTML = '<h4 class="title">\n' +
+                '<strong class="name">' + data[input-1].name + '</strong>\n' +
+                '<em class="alter-ego">' + data[input-1].alterEgo + '</em>\n' +
+                '</h4>\n' +
+                '<p class="powers">' + data[input-1].abilities + '</p>';
+        }
+    })
+    function checkInput() {
+        input = document.getElementById("hero-id").value;
+    }
 })();
