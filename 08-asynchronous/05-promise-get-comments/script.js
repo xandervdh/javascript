@@ -11,15 +11,25 @@
 
 (() => {
     let run = document.getElementById("run");
+    let array;
 
     run.addEventListener("click", function (){
-        function successCallback(result) {
-            console.log(result);
+
+        function succesTwoCallback(comments) {
+            //console.log(comments);
+            array.comment = comments;
+            console.log(array);
+
         }
 
-        function failureCallback(error) {
-            console.error(error);
+        function successCallback(posts) {
+            //console.log(posts);
+            posts.forEach(post => {
+                array = post;
+                window.lib.getComments(post.id).then(succesTwoCallback);
+            })
         }
-        window.lib.getPosts().then(successCallback, failureCallback);
+
+        window.lib.getPosts().then(successCallback);
     })
 })();
