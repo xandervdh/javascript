@@ -10,5 +10,12 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let run = document.getElementById("run");
+
+    run.addEventListener("click", function (){
+        async function successCallback(result) {
+            console.log(result);
+        }
+        window.lib.getPosts().then(successCallback);
+    })
 })();
