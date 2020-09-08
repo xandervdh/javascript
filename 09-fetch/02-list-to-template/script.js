@@ -11,21 +11,29 @@
 
 (() => {
     let run = document.getElementById("run");
+
     run.addEventListener("click", function (){
         fetch("http://localhost:3000/heroes")
             .then(response => response.json())
             .then(data => appendData(data))
+
         function appendData(data){
             console.log(data);
             let target = document.getElementById("target");
             for (let i = 0; i < data.length; i++){
-                let div = document.createElement("div");
+                let temp = document.getElementById("tpl-hero").content.cloneNode(true);
+
+                temp.querySelector(".name").innerText = data[i].name;
+                temp.querySelector(".alter-ego").innerText = data[i].alterEgo;
+                temp.querySelector(".powers").innerText = data[i].abilities;
+                target.appendChild(temp);
+                /*let div = document.createElement("div");
                 div.innerHTML = '<h4 class="title">\n' +
                     '<strong class="name">' + data[i].name + '</strong>\n' +
                     '<em class="alter-ego">' + data[i].alterEgo + '</em>\n' +
                     '</h4>\n' +
                     '<p class="powers">' + data[i].abilities + '</p>'
-                target.appendChild(div);
+                target.appendChild(div);*/
             }
         }
     })
