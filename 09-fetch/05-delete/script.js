@@ -10,5 +10,25 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let submit = document.getElementById("run");
+    let input;
+
+    submit.addEventListener("click", function () {
+        checkInput();
+        fetch("http://localhost:3000/heroes")
+            .then(response => response.json())
+            .then(data => removeData(data))
+    })
+
+    function removeData(data){
+        console.log(data);
+        console.log(input);
+        delete data[input-1];
+        console.log(data);
+    }
+
+    function checkInput() {
+
+        input = document.getElementById("hero-id").value;
+    }
 })();
