@@ -20,6 +20,6 @@
         function failureCallback(error) {
             console.error(error);
         }
-        window.lib.getPosts().then(successCallback, failureCallback);
+        window.lib.getPersons().then(successCallback, failureCallback);
     })
 })();
