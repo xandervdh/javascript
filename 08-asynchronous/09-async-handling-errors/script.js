@@ -14,11 +14,11 @@
 
     run.addEventListener("click", function (){
         async function successCallback(result) {
-            console.log(result);
+            await console.log(result);
         }
 
         async function failureCallback(error) {
-            console.error(error);
+            await console.error(error);
         }
         window.lib.getPersons().then(successCallback, failureCallback);
     })
