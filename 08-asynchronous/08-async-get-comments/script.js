@@ -10,5 +10,26 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let run = document.getElementById("run");
+    let array;
+
+    run.addEventListener("click", function (){
+
+        async function succesTwoCallback(comments) {
+            //console.log(comments);
+            array.comment = comments;
+            console.log(array);
+
+        }
+
+        async function successCallback(posts) {
+            //console.log(posts);
+            posts.forEach(post => {
+                array = post;
+                window.lib.getComments(post.id).then(succesTwoCallback);
+            })
+        }
+
+        window.lib.getPosts().then(successCallback);
+    })
 })();
