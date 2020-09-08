@@ -14,7 +14,7 @@
 
     run.addEventListener("click", function (){
         async function successCallback(result) {
-            console.log(result);
+            await console.log(result);
         }
         window.lib.getPosts().then(successCallback);
     })
